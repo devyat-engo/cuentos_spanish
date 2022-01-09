@@ -2,6 +2,11 @@ import re
 from cuento import cuento
 
 
+# todo: Add the slack push. The idea is to have the /next to call each new sentence
+# todo: Add a menu to choose which story you want to "read"
+# todo: Add a reset counter to 0 controlled by the user
+
+
 def print_per_sentence():
     with open('counter.txt', 'r') as file:
         numb = file.readlines()
@@ -21,7 +26,7 @@ def print_per_sentence():
         with open('counter.txt', 'w') as f:
             counter_str = str(0)
             f.write(counter_str)
-        print('¡Este cuento se acabó Kate! Si quieres leerlo de nuevo vuelve a escribir "/next", de lo contrario dile a Enrique que te prepare un nuevo cuento')
+        print('¡Este cuento se acabó! Si quieres leerlo de nuevo vuelve a escribir ´/next´')
 
 
 if __name__ == '__main__':
