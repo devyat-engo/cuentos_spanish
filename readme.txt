@@ -3,7 +3,8 @@
 #################################################
 
 ################# What it does? #################
-
+The idea of this code was to help someone to learn spanish with some fairy tales.
+The user is able to request one sentence at a time from a fairy tale, pushed to slack.
 #################################################
 
 ############### What it contains? ###############
