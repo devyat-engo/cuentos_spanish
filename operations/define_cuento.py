@@ -14,7 +14,7 @@ def delete_non_cuentos_files():
 def get_cuentos():
     list_cuentos = []
     counter = 0
-    remove_extension = '.py'
+    remove_extension = '.txt'
     list_files = [f for f in listdir(f'{vars.database_location}Cuentos') if isfile(join(f'{vars.database_location}Cuentos', f))]
     list_files = sorted(list_files)
     # print(list_files)
@@ -31,13 +31,14 @@ def get_cuentos():
 
 
 def set_cuento(cuento_number, list_cuentos):
-    # print(cuento_number)
     num_cuentos = len(list_cuentos) + 1
     for item in list_cuentos:
         for x in range(num_cuentos):
             try:
                 if item[x] == item[cuento_number]:
-                    print(f'The \"Cuento\" to read will be {item[cuento_number]}')
+                    cuento_to_read = item[cuento_number]
+
+                    return cuento_to_read
                 else:
                     pass
             except:
