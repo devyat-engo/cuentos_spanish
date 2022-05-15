@@ -1,5 +1,5 @@
 from logs import logging_settings
-from operations import define_cuento, input_handling
+from operations import define_cuento, input_handling, build_cuento
 
 
 logger = logging_settings.setup_logger('Main', 'main_log')
@@ -13,7 +13,11 @@ def main():
     define_cuento.delete_non_cuentos_files()
     list_cuentos = define_cuento.get_cuentos()
     cuento_number = input_handling.input_choose(list_cuentos)
-    define_cuento.set_cuento(cuento_number, list_cuentos)
+    cuento_to_read = define_cuento.set_cuento(cuento_number, list_cuentos)
+
+    cuento_str = build_cuento.build_string(cuento_to_read)
+    build_cuento.print_per_sentence(cuento_str)
+
     logger.info('Main completed')
 
 
