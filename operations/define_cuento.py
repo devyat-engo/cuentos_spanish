@@ -1,3 +1,4 @@
+import shutil
 import os
 from os import listdir
 from os.path import isfile, join
@@ -37,8 +38,19 @@ def set_cuento(cuento_number, list_cuentos):
             try:
                 if item[x] == item[cuento_number]:
                     cuento_to_read = item[cuento_number]
-
-                    return cuento_to_read
+                    source = f'{vars.database_location}/Cuentos/{cuento_to_read}.txt'
+                    destination = f'{vars.database_location}current_cuento.txt'
+                    try:
+                        shutil.copy(source, destination)
+                    except shutil.SameFileError:
+                        print("The selected cuento is the same as the one currently running.")
+                        pass
+                    except PermissionError:
+                        print("Permission denied.")
+                        pass
+                    except:
+                        print("Error occurred while copying file.")
+                        pass
                 else:
                     pass
             except:
