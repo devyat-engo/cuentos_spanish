@@ -2,15 +2,14 @@ import re
 from lib import vars
 
 
-def build_string(cuento_to_read):
-    text_file = open(f'{vars.database_location}Cuentos/{cuento_to_read}.txt', "r")
+def build_string():
+    text_file = open(f'{vars.database_location}current_cuento.txt', "r")
     cuento_str = text_file.read()
     text_file.close()
 
     return cuento_str
 
 
-# todo: to be called from slack with word "next"
 def print_per_sentence(cuento_str):
     with open(f'{vars.database_location}counter.txt', 'r') as file:
         numb = file.readlines()
@@ -30,4 +29,4 @@ def print_per_sentence(cuento_str):
         with open(f'{vars.database_location}counter.txt', 'w') as f:
             counter_str = str(0)
             f.write(counter_str)
-        print('¡Este cuento se acabó! Si quieres leerlo de nuevo vuelve a escribir ´/next´')
+        print('¡Este cuento se acabó! Si continuas, empezará de nuevo')
