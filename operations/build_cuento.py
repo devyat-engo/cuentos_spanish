@@ -28,13 +28,18 @@ def build_string():
 
 
 def print_per_sentence(cuento_str):
+    clean_sentences = []
     with open(f'{vars.database_location}counter.txt', 'r') as file:
         numb = file.readlines()
         counter = int(numb[0])
 
+    cuento_str = cuento_str.replace('. ', '.')
+    cuento_str = cuento_str.replace('\n', '')
     list_sentences = re.split('[.]', cuento_str)
     tot_sent = len(list_sentences) - 1
     list_sentences.pop()
+    # for sentence in list_sentences:
+    #     clean_sentences.append(sentence.replace(". ", "."))
     if counter < tot_sent:
         print(f'{list_sentences[counter]}.')
         counter = counter + 1

@@ -56,8 +56,7 @@ def main(menu_res):
         menu_res = input_handling.intro_menu()
         main(menu_res)
 
-    logger.info('Main completed')
-
 
 if __name__ == '__main__':
     main(menu_res)
+    logger.info('Main completed')
