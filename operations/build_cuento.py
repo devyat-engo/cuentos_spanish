@@ -8,6 +8,17 @@ def reset_counter():
         f.write(counter_str)
 
 
+def counter_minus_one():
+    with open(f'{vars.database_location}counter.txt', 'r') as file:
+        numb = file.readlines()
+        counter = int(numb[0])
+        prev_counter = counter - 2
+        prev_counter = str(prev_counter)
+
+    with open(f'{vars.database_location}counter.txt', 'w') as f:
+        f.write(prev_counter)
+
+
 def build_string():
     text_file = open(f'{vars.database_location}current_cuento.txt', "r")
     cuento_str = text_file.read()

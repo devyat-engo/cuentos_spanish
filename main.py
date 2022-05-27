@@ -25,8 +25,7 @@ def hidden_menu(cuento_str):
             menu_res = 2
             main(menu_res)
         elif hidden_menu_inp.lower() == 'previous':
-            # todo: build functionality to go to previous sentence
-            print('You want the previous sentence')
+            build_cuento.counter_minus_one()
         elif hidden_menu_inp.lower() == 'reset':
             build_cuento.reset_counter()
         elif hidden_menu_inp.lower() == 'help' or hidden_menu_inp.lower() == 'h':
