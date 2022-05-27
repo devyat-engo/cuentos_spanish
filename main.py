@@ -1,15 +1,8 @@
 from logs import logging_settings
 from operations import define_cuento, input_handling, build_cuento
-
+from lib import vars
 
 logger = logging_settings.setup_logger('Main', 'main_log')
-
-
-menu_res = input_handling.intro_menu()
-
-
-# todo: Add the slack functionality
-# todo: add Cuento to database
 
 
 def hidden_menu(cuento_str):
@@ -24,7 +17,7 @@ def hidden_menu(cuento_str):
         elif hidden_menu_inp.lower() == 'continue':
             menu_res = 2
             main(menu_res)
-        elif hidden_menu_inp.lower() == 'previous':
+        elif hidden_menu_inp.lower() == 'prev':
             build_cuento.counter_minus_one()
         elif hidden_menu_inp.lower() == 'reset':
             build_cuento.reset_counter()
@@ -58,5 +51,6 @@ def main(menu_res):
 
 
 if __name__ == '__main__':
+    menu_res = input_handling.intro_menu()
     main(menu_res)
     logger.info('Main completed')

@@ -1,4 +1,0 @@
-Este es un cuento ejemplo. La idea es ver si el import funciona correctamente
-Por ejemplo, segunda linea.
-Tercera linea. Esta no es otra linea.
-Pero esta si, cuarta.
