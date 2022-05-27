@@ -2,7 +2,7 @@
 
 def intro_menu():
     try:
-        main_input = input(f'Good morning Kate, how is today\'s learning going to be?\nWould you like to read a new fairytale or continue where you left?\nChoose by using the keyword \"new\" or \"continue\" or \"help\":\n')
+        main_input = input(f'Good morning Kate, how is today\'s learning going to be?\nWould you like to read a new \"Cuento\" or continue where you left?\nChoose by using the keyword \"new\" or \"continue\" or \"help\":\n')
         if main_input.lower() == 'new' or main_input.lower() == 'n':
             menu_res = 1
             return menu_res
@@ -12,7 +12,7 @@ def intro_menu():
         elif main_input.lower() == 'help' or main_input.lower() == 'h':
             help_menu()
         elif main_input.lower() == 'next' or main_input.lower() == 'previous' or main_input.lower() == 'reset' or main_input == '':
-            print('This option is only valid while you are reading a Cuento, do not try to fool me -.-\n')
+            print('This option is only valid while you are reading a \"Cuento\", do not try to fool me -.-\n')
             menu_res = 3
             return menu_res
         elif main_input.lower() == 'quit' or main_input.lower() == 'q':
@@ -27,7 +27,6 @@ def intro_menu():
 
 
 def input_choose(list_cuentos):
-    # 27
     num_cuentos = len(list_cuentos) + 1
     cuento_number = 0
     try:

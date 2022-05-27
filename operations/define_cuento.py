@@ -43,7 +43,7 @@ def set_cuento(cuento_number, list_cuentos):
                     try:
                         shutil.copy(source, destination)
                     except shutil.SameFileError:
-                        print("The selected cuento is the same as the one currently running.")
+                        print("The selected \"Cuento\" is the same as the one currently running.")
                         pass
                     except PermissionError:
                         print("Permission denied.")

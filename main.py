@@ -28,10 +28,7 @@ def hidden_menu(cuento_str):
             # todo: build functionality to go to previous sentence
             print('You want the previous sentence')
         elif hidden_menu_inp.lower() == 'reset':
-            # todo: function to reset the counter to 0
-            # below is on continue so the same Cuento runs
-            menu_res = 2
-            main(menu_res)
+            build_cuento.reset_counter()
         elif hidden_menu_inp.lower() == 'help' or hidden_menu_inp.lower() == 'h':
             input_handling.help_menu()
             menu_res = 3
@@ -41,6 +38,7 @@ def hidden_menu(cuento_str):
 def main(menu_res):
     # for "new"
     if menu_res == 1:
+        build_cuento.reset_counter()
         define_cuento.delete_non_cuentos_files()
         list_cuentos = define_cuento.get_cuentos()
         cuento_number = input_handling.input_choose(list_cuentos)
