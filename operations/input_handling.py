@@ -11,7 +11,7 @@ def intro_menu():
             return menu_res
         elif main_input.lower() == 'help' or main_input.lower() == 'h':
             help_menu()
-        elif main_input.lower() == 'next' or main_input.lower() == 'previous' or main_input.lower() == 'reset' or main_input == '':
+        elif main_input.lower() == 'next' or main_input.lower() == 'prev' or main_input.lower() == 'reset' or main_input == '':
             print('This option is only valid while you are reading a \"Cuento\", do not try to fool me -.-\n')
             menu_res = 3
             return menu_res
@@ -46,7 +46,7 @@ def help_menu():
           'My functionality is reduced to the following commands that you can always type while you are reading one of the fairytales\n'
           '\"new\":             You will be requested to choose a new Cuento to read.\n'
           '\"next\":            The next sentence of the Cuento will appear. Same as pressing the enter key.\n'
-          '\"previous\":        The previous sentence of the Cuento will appear.\n'
+          '\"prev\":            The previous sentence of the Cuento will appear.\n'
           '\"reset\":           The counter of your Cuento will reset and the current Cuento will start from the beginning.\n'
           '\"quit\" or \"q\":   Exits the program.\n'
           '\"help\" or \"h\":   Brings back this message.\n'
