@@ -42,13 +42,17 @@ def input_choose(list_cuentos):
 
 
 def help_menu():
-    print('No worries, I am here to help.\n'
-          'My functionality is reduced to the following commands that you can always type while you are reading one of the fairytales\n'
-          '\"new\":             You will be requested to choose a new Cuento to read.\n'
-          '\"next\":            The next sentence of the Cuento will appear. Same as pressing the enter key.\n'
-          '\"prev\":            The previous sentence of the Cuento will appear.\n'
-          '\"reset\":           The counter of your Cuento will reset and the current Cuento will start from the beginning.\n'
-          '\"quit\" or \"q\":   Exits the program.\n'
-          '\"help\" or \"h\":   Brings back this message.\n'
-          '* Remember that if you press the enter key without keyword, you will continue to the next sentence.\n\n')
+    help_message = 'No worries, I am here to help.\n'\
+                   'My functionality is reduced to the following commands that you can always type while you are reading one of the fairytales\n'\
+                   '\"new\":             You will be requested to choose a new Cuento to read.\n'\
+                   '\"next\":            The next sentence of the Cuento will appear. Same as pressing the enter key.\n'\
+                   '\"prev\":            The previous sentence of the Cuento will appear.\n'\
+                   '\"reset\":           The counter of your Cuento will reset and the current Cuento will start from the beginning.\n'\
+                   '\"quit\" or \"q\":   Exits the program.\n'\
+                   '\"help\" or \"h\":   Brings back this message.\n'\
+                   '* Remember that if you press the enter key without keyword, you will continue to the next sentence.\n\n'
+
+    print(help_message)
+
+    return help_message
 

@@ -47,6 +47,11 @@ def print_per_sentence(cuento_str):
         with open(f'{vars.database_location}counter.txt', 'w') as f:
             counter_str = str(counter)
             f.write(counter_str)
+
+        return f'{list_sentences[counter]}.'
+
     else:
         reset_counter()
         print('¡Este cuento se acabó! Si continuas, empezará de nuevo')
+
+        return '¡Este cuento se acabó! Si continuas, empezará de nuevo'
