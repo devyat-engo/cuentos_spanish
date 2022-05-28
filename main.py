@@ -14,7 +14,7 @@ def hidden_menu(cuento_str):
         elif hidden_menu_inp.lower() == 'new':
             menu_res = 1
             main(menu_res)
-        elif hidden_menu_inp.lower() == 'continue':
+        elif hidden_menu_inp.lower() == 'cont':
             menu_res = 2
             main(menu_res)
         elif hidden_menu_inp.lower() == 'prev':
