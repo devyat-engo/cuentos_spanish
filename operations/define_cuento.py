@@ -1,5 +1,6 @@
 import shutil
 import os
+import random
 from os import listdir
 from os.path import isfile, join
 from lib import vars
@@ -56,3 +57,10 @@ def set_cuento(cuento_number, list_cuentos):
             except:
                 pass
 
+
+def set_random_cuento(list_cuentos):
+    total_cuentos = len(list_cuentos) + 1
+
+    cuento_number = random.randint(0, total_cuentos)
+
+    return cuento_number
