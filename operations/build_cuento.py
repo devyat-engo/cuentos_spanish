@@ -8,11 +8,22 @@ def reset_counter():
         f.write(counter_str)
 
 
+def increase_counter():
+    with open(f'{vars.database_location}counter.txt', 'r') as file:
+        numb = file.readlines()
+        counter = int(numb[0])
+
+    counter = counter + 1
+    with open(f'{vars.database_location}counter.txt', 'w') as f:
+        counter_str = str(counter)
+        f.write(counter_str)
+
+
 def counter_minus_one():
     with open(f'{vars.database_location}counter.txt', 'r') as file:
         numb = file.readlines()
         counter = int(numb[0])
-        prev_counter = counter - 2
+        prev_counter = counter - 1
         prev_counter = str(prev_counter)
 
     with open(f'{vars.database_location}counter.txt', 'w') as f:
@@ -28,7 +39,6 @@ def build_string():
 
 
 def print_per_sentence(cuento_str):
-    clean_sentences = []
     with open(f'{vars.database_location}counter.txt', 'r') as file:
         numb = file.readlines()
         counter = int(numb[0])
@@ -38,15 +48,9 @@ def print_per_sentence(cuento_str):
     list_sentences = re.split('[.]', cuento_str)
     tot_sent = len(list_sentences) - 1
     list_sentences.pop()
-    # for sentence in list_sentences:
-    #     clean_sentences.append(sentence.replace(". ", "."))
+
     if counter < tot_sent:
         print(f'{list_sentences[counter]}.')
-        counter = counter + 1
-
-        with open(f'{vars.database_location}counter.txt', 'w') as f:
-            counter_str = str(counter)
-            f.write(counter_str)
 
         return f'{list_sentences[counter]}.'
 
