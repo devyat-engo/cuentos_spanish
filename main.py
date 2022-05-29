@@ -8,6 +8,7 @@ logger = logging_settings.setup_logger('Main', 'main_log')
 def hidden_menu(cuento_str):
     while True:
         build_cuento.print_per_sentence(cuento_str)
+        build_cuento.increase_counter()
         hidden_menu_inp = input()
         if hidden_menu_inp.lower() == 'q' or hidden_menu_inp.lower() == 'quit':
             break
