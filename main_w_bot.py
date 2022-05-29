@@ -1,11 +1,10 @@
-from logs import logging_settings
 from operations import define_cuento, input_handling, build_cuento
 from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
 from lib import vars
 from common import push_slack
 
-logger = logging_settings.setup_logger('Main', 'main_log')
+
 app = App(token=vars.slack_bot_token)
 
 init_message = input_handling.welcome_message()

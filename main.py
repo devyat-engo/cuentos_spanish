@@ -1,8 +1,4 @@
-from logs import logging_settings
 from operations import define_cuento, input_handling, build_cuento
-from lib import vars
-
-logger = logging_settings.setup_logger('Main', 'main_log')
 
 
 def hidden_menu(cuento_str):
@@ -54,4 +50,3 @@ def main(menu_res):
 if __name__ == '__main__':
     menu_res = input_handling.intro_menu()
     main(menu_res)
-    logger.info('Main completed')
