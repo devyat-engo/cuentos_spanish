@@ -42,7 +42,7 @@ def input_choose(list_cuentos):
 
 
 def help_menu():
-    help_message = 'No worries, I am here to help.\n'\
+    help_message = 'No worries Kate, I am here to help.\n'\
                    'My functionality is reduced to the following commands that you can always type while you are reading one of the fairytales\n'\
                    '\"new\":             You will be requested to choose a new Cuento to read.\n' \
                    '\"cont\":            You will start the Cuento where you left.\n' \
@@ -59,13 +59,13 @@ def help_menu():
 
 
 def help_menu_slack():
-    help_message = 'No worries, I am here to help.\n'\
+    help_message = 'No worries Kate, I am here to help.\n'\
                    'My functionality is reduced to the following commands:\n' \
                    'next:            I will reply with the next sentence from the Cuento.\n' \
                    'prev:            I will reply with the previous sentence from the Cuento.\n' \
-                   '/new:             I will choose a random new Cuento for you to read.\n' \
-                   '/reset:           You will start the Cuento from the beginning as soon as you type \"next\".\n'\
-                   '/help or \"h\":   Brings back this message.\n'\
+                   '/new:            I will choose a random new Cuento for you to read.\n' \
+                   '/reset:          You will start the Cuento from the beginning as soon as you type \"next\".\n'\
+                   '/help:           Brings back this message.\n'\
 
     print(help_message)
 
@@ -74,7 +74,7 @@ def help_menu_slack():
 
 def welcome_message():
     welc_message = 'Good morning Kate, how is today\'s learning going to be?\n' \
-                   'Type \"next\" or \"prev\" to get the next or previous sentence accordingly.\n ' \
-                   'If you have doubts type \"/help\" to get a menu with more details, or ask you know who :)'
+                   'Type \"next\" or \"prev\" to get the sentence accordingly.\n ' \
+                   'If you have doubts type \"/help\", or ask you know who :)'
 
     return welc_message
